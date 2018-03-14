@@ -7,10 +7,7 @@ let c = require('./MyComponent.js');
 let React = require('react');
 let ReactDOMServer = require('react-dom/server');
 
-
-
 app.set('port', 3000);
-
 
 app.use('/MyComponent.js', express.static(path.join('MyComponent.js')));
 
@@ -25,23 +22,19 @@ app.get('/clientsidereact', function (req,res) {
 
 // TODO Crează un endpoint care să întoarcă un html care să conțină deja o componentă React foarte simplă (aceeași) randată server side
 app.get('/serversidereact', function (req,res) {
-
 	let component = React.createElement(c.component, null)
-
-        let html = ReactDOMServer.renderToString(component);
+	let html = ReactDOMServer.renderToString(component);
 
 	console.log(html);	
 
 	fs.readFile('./test1.html', 'utf8', function (err, data) {
-        	if (err) throw err;
+       	if (err) throw err;
 
-                const document = data.replace(/<div id="react"><\/div>/, `<div id="react">${html}</div>`);
+        const document = data.replace(/<div id="react"><\/div>/, `<div id="react">${html}</div>`);
 
 		console.log(document);	
-                res.send(document)
-            });
-
-
+		res.send(document)
+	});
 });
 
 app.listen(3000);
