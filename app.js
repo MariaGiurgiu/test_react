@@ -20,9 +20,9 @@ app.get('/serversidereact', function (req,res) {
 	let html = ReactDOMServer.renderToString(component);
 
 	fs.readFile('./test1.html', 'utf8', function (err, data) {
-       	if (err) throw err;
+       		if (err) throw err;
 
-        const document = data.replace(/<div id="react"><\/div>/, `<div id="react">${html}</div>`); // <div id="react" -> prin convenție, nu se pun spații înainte/după = în html.
+        	const document = data.replace(/<div id="react"><\/div>/, `<div id="react">${html}</div>`);
 
 		console.log(document);	
 		return res.send(document)
