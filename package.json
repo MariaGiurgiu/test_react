@@ -1,7 +1,7 @@
 {
   "name": "app",
   "version": "1.0.0",
-  "description": "",
+  "description": "tra la la",
   "main": "app.js",
   "dependencies": {
     "express": "^4.16.3",
