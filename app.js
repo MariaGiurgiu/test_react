@@ -25,7 +25,7 @@ app.get('/serversidereact', function (req,res) {
         const document = data.replace(/<div id="react"><\/div>/, `<div id="react">${html}</div>`);
 
 		console.log(document);	
-		res.send(document)
+		return res.send(document)
 	});
 });
 
