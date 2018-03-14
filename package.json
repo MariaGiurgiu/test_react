@@ -1,12 +1,12 @@
 {
   "name": "app",
   "version": "1.0.0",
-  "description": "",
+  "description": "tra la la",
   "main": "app.js",
   "dependencies": {
     "express": "^4.16.3",
     "fs": "0.0.1-security",
-    "react": "^16.2.0",
+    "react": "^16.0.0",
     "react-dom": "^16.2.0"
   },
   "devDependencies": {},
@@ -14,5 +14,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MariaGiurgiu/test_react"
+  }
 }
