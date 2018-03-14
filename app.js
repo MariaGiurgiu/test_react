@@ -19,8 +19,6 @@ app.get('/serversidereact', function (req,res) {
 	let component = React.createElement(c.component, null)
 	let html = ReactDOMServer.renderToString(component);
 
-	console.log(html);	
-
 	fs.readFile('./test1.html', 'utf8', function (err, data) {
        	if (err) throw err;
 
